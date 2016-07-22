@@ -15,6 +15,7 @@ import java.util.ResourceBundle;
  */
 public class Program extends Application {
 
+    public static final String VERSION = "1";
     public static final String TEMP_FILE_NAME = "iconvert-png";
     public static final String TEMP_FILE_EXT = ".tmp";
 
@@ -36,7 +37,7 @@ public class Program extends Application {
         Parent root = loader.load();
         root.getStylesheets().add("style.css");
 
-        primaryStage.setTitle("icoNvert");
+        primaryStage.setTitle("icoNvert " + VERSION);
         primaryStage.getIcons().add(new Image("/icon.png"));
         primaryStage.setScene(new Scene(root, 678, 555));
         primaryStage.setOnCloseRequest(e -> TempFileManager.INSTANCE.cleanup());
