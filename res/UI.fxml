@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="666.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane layoutX="8.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="tabSimple" text="%tab.simple">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="531.0" prefWidth="700.0">
+                     <children>
+                        <Button fx:id="btnConvertSimple" layoutX="14.0" layoutY="314.0" mnemonicParsing="false" onAction="#onConvertSimple" prefHeight="33.0" prefWidth="155.0" text="%general.convert" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="256.0" prefWidth="256.0" styleClass="grey-plate" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <ImageView fx:id="imgPreview" fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <ProgressIndicator fx:id="progPreview" layoutX="64.0" layoutY="64.0" prefHeight="128.0" prefWidth="128.0" visible="false" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="64.0" />
+                           </children>
+                        </AnchorPane>
+                        <Button fx:id="btnSelectSimple" layoutX="279.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSelectSimple" prefHeight="31.0" prefWidth="263.0" text="%general.select-image" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+                        <Text fill="#333333" layoutX="281.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%general.selected-image" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="325.04443359375" AnchorPane.topAnchor="65.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtSource" layoutX="280.0" layoutY="94.0" prefHeight="31.0" prefWidth="417.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="94.0" />
+                        <Text layoutX="281.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%general.size" wrappingWidth="51.6708984375" AnchorPane.leftAnchor="280.0" AnchorPane.topAnchor="134.0" />
+                        <Text fx:id="textSize" layoutX="343.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Unknown" wrappingWidth="309.6708984375" AnchorPane.leftAnchor="343.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="134.0" />
+                        <Text fill="#333333" layoutX="279.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%general.output" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="326.0" AnchorPane.topAnchor="208.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="txtOutput" layoutX="280.0" layoutY="237.0" prefHeight="33.0" prefWidth="416.0" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="237.0" />
+                        <Text fx:id="textSizeWarning" layoutX="343.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="353.6708984375" />
+                        <Button fx:id="btnBrowseSimple" layoutX="591.0" layoutY="202.0" mnemonicParsing="false" onAction="#onBrowseSimple" prefHeight="31.0" prefWidth="115.0" text="%general.browse" AnchorPane.rightAnchor="14.0" />
+                        <Text fill="#333333" layoutX="18.0" layoutY="308.1865234375" strokeType="OUTSIDE" strokeWidth="0.0" text="%general.select-sizes" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="292.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="18.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%general.standard" AnchorPane.leftAnchor="18.0" />
+                        <CheckBox fx:id="checkSize256" layoutX="18.0" layoutY="346.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="113.0" selected="true" text="256×256" AnchorPane.leftAnchor="18.0" />
+                        <CheckBox fx:id="checkSize48" layoutX="18.0" layoutY="374.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="88.0" selected="true" text="48×48" AnchorPane.leftAnchor="18.0" />
+                        <CheckBox fx:id="checkSize32" layoutX="18.0" layoutY="402.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="101.0" selected="true" text="32×32" AnchorPane.leftAnchor="18.0" />
+                        <CheckBox fx:id="checkSize16" layoutX="18.0" layoutY="431.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="104.0" selected="true" text="16×16" AnchorPane.leftAnchor="18.0" />
+                        <CheckBox fx:id="checkSize72" layoutX="294.0" layoutY="346.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="103.0" text="72×72" AnchorPane.leftAnchor="318.0" />
+                        <CheckBox fx:id="checkSize96" layoutX="156.0" layoutY="402.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="97.0" text="96×96" AnchorPane.leftAnchor="168.0" />
+                        <CheckBox fx:id="checkSize108" layoutX="156.0" layoutY="374.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="104.0" text="108×108" AnchorPane.leftAnchor="168.0" />
+                        <CheckBox fx:id="checkSize180" layoutX="156.0" layoutY="346.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="103.0" text="180×180" AnchorPane.leftAnchor="168.0" />
+                        <Text layoutX="156.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%general.extra" AnchorPane.leftAnchor="168.0" />
+                        <CheckBox fx:id="checkSize64" layoutX="294.0" layoutY="374.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="90.0" text="64×64" AnchorPane.leftAnchor="318.0" />
+                        <CheckBox fx:id="checkSize24" layoutX="294.0" layoutY="401.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="104.0" text="24×24" AnchorPane.leftAnchor="318.0" />
+                        <ProgressBar fx:id="progSimple" layoutX="183.0" layoutY="472.0" prefHeight="34.0" prefWidth="468.0" progress="0.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="14.0" />
+                        <Text fill="#333333" layoutX="423.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%general.other-options" AnchorPane.leftAnchor="459.0">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="423.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%general.resize-operation" AnchorPane.leftAnchor="459.0" />
+                        <RadioButton fx:id="radioScale" layoutX="423.0" layoutY="347.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="198.0" selected="true" text="%general.scale" AnchorPane.leftAnchor="459.0">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="resizeoperation" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="radioCrop" layoutX="423.0" layoutY="375.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="198.0" text="%general.crop" toggleGroup="$resizeoperation" AnchorPane.leftAnchor="459.0" />
+                        <Button fx:id="btnReload" layoutX="623.0" layoutY="95.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#reload" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="94.0" />
+                        <ImageView disable="true" fitHeight="16.0" fitWidth="16.0" layoutX="629.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="102.0">
+                           <image>
+                              <Image url="@reload.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="textDone" fill="WHITE" layoutX="193.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" wrappingWidth="449.7705078125" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="23.2294921875" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabAdvanced" text="%tab.advanced">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="%general.settings">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

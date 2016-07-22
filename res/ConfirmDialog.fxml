@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="148.0" prefWidth="380.0" styleClass="background-dark" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="background" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <Button layoutX="73.0" layoutY="88.0" mnemonicParsing="false" onAction="#yes" prefHeight="31.0" prefWidth="100.0" text="%general.yes" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="80.0" />
+            <Text fx:id="textMessage" layoutX="22.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Single line" textAlignment="CENTER" wrappingWidth="333.6708984375" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.3291015625" />
+            <Button layoutX="139.0" layoutY="58.0" mnemonicParsing="false" onAction="#no" prefHeight="31.0" prefWidth="100.0" text="%general.no" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="80.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

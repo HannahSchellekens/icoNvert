@@ -1,0 +1,159 @@
+/* GENERAL */
+.background {
+    -fx-background-color: white;
+}
+
+.background-dark {
+    -fx-background-color: #db4e53;
+}
+
+.text {
+    -fx-text-fill: #333;
+}
+
+.grey-plate {
+    -fx-background-color: #EEE;
+}
+
+/* PROGRESS */
+.progress-bar .track {
+    -fx-background-radius: 0;
+    -fx-background-color: white;
+    -fx-border-color: #BBB;
+}
+
+.progress-bar .bar {
+    -fx-background-radius: 0;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-color: #db4e53;
+}
+
+.progress-indicator {
+    -fx-progress-color: #db4e53;
+}
+
+/* CHECK BOX */
+.check-box .box {
+    -fx-border-color: #BBB;
+    -fx-border-radius: 0;
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+}
+
+.check-box:hover .box {
+    -fx-border-color: #db4e53;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #db4e53;
+    -fx-border-color: #db4e53;
+}
+
+.check-box:selected:hover .box {
+    -fx-background-color: #dc565a;
+}
+
+.check-box:selected:pressed .box {
+    -fx-background-color: #e16b6f;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: white;
+}
+
+/* RADIO BUTTONS */
+.radio-button .radio {
+    -fx-background-color: white;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-border-color: #BBB;
+}
+
+.radio-button:hover .radio {
+    -fx-border-color: #db4e53;
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: #db4e53;
+    -fx-border-color: #db4e53;
+}
+
+.radio-button:selected:hover .radio {
+    -fx-background-color: #dc565a;
+}
+
+.radio-button:selected:pressed .radio {
+    -fx-background-color: #e16b6f;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: white;
+}
+
+/* TEXT FIELD */
+.text-field {
+    -fx-border-width: 1;
+    -fx-border-color: #BBB;
+    -fx-background-color: white;
+    -fx-highlight-fill: #db4e53;
+    -fx-font-size: 8pt;
+}
+
+.text-field:hover {
+    -fx-border-color: #999;
+}
+
+.text-field:focused {
+    -fx-border-color: #db4e53;
+}
+
+/* BUTTONS */
+.button {
+    -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-text-fill: white;
+    -fx-background-color: #db4e53;
+    -fx-focus-color: transparent;
+}
+
+.button:hover {
+    -fx-background-color: #dc565a;
+}
+
+.button:pressed {
+    -fx-background-color: #e16b6f;
+}
+
+/* TAB */
+.tab-header-area {
+    -fx-border-width: 0;
+    -fx-background-color: #DDD;
+    -fx-padding: 0;
+}
+
+.tab-header-background {
+    -fx-border-width: 0;
+    -fx-background-color: #DDD;
+}
+
+.tab {
+    -fx-border-width: 0;
+    -fx-background-color: #DDD;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.tab:selected,
+.tab:selected:hover {
+    -fx-background-color: white;
+}
+
+.tab:hover {
+    -fx-background-color: #EEE;
+}
+
+.tab-pane {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-border-width: 0;
+}
