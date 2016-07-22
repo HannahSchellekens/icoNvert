@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: icoNvert.jar
+Main-Class: nl.rubenschellekens.iconvert.Program
+
